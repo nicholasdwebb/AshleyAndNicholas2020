@@ -3,7 +3,7 @@ $(function(){
 		$("#gal-col-"+col).append('<img id="gal-img-'+i+'" src="Pics/Gallery/'+i+'.jpg" onerror="$(this).remove();" />'
 			+'<img id="gal-img-'+i+'" src="Pics/Gallery/'+i+'.png" onerror="$(this).remove();" />'
 			+'<img id="gal-img-'+i+'" src="Pics/Gallery/'+i+'.PNG" onerror="$(this).remove();" />')
-			.ready(function(){
+			.ready(setTimeout(function(){
 				if($('#gal-img-'+i).length != 0){
 					// console.log(i);
 					i++
@@ -13,7 +13,7 @@ $(function(){
 					}
 					loadImages(col, i);
 				}
-			});
+			},25));
 	}
 	loadImages(1,1);
 })
