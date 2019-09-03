@@ -4,7 +4,7 @@ $(function(){
 		$("#gal-col-"+col).append('<img id="gal-img-'+i+'" src="Pics/Gallery/'+i+'.jpg" onerror="$(this).remove();" />'
 			+'<img id="gal-img-'+i+'" src="Pics/Gallery/'+i+'.png" onerror="$(this).remove();" />'
 			+'<img id="gal-img-'+i+'" src="Pics/Gallery/'+i+'.PNG" onerror="$(this).remove();" />');
-		if(i<$("#picCount").html()){
+		if(i<parseInt($("#picCount").html())){
 			i++
 			col++
 			if(col == 4){
