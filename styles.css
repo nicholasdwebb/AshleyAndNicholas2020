@@ -26,6 +26,26 @@ nav{
 	margin-left: 10px;
 	margin-bottom: 10px;
 }
+#hedgehog{
+	float: right;
+	width: 30%;
+	border: 4px solid white;
+	-webkit-box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.23);
+	-moz-box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.23);
+	box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.23);
+	/*margin: 0 10px;*/
+	background-color: white;
+	transform: rotate(10deg);
+	margin: 20px;
+}
+#hedgehog img{
+	max-width: 100%;
+}
+#hedgehog p{
+	margin: 5px;
+	text-align: center;
+	font-size: 0.9em;
+}
 @media only screen and (max-width: 767px) {
 	.face-icons:nth-of-type(2){
 		width: 18%;
@@ -34,6 +54,10 @@ nav{
 	.face-icons:nth-of-type(1){
 		width: 18%;
 		margin-right: 30%;
+	}
+	#hedgehog{
+		width: 60%;
+		margin: 20px 19%;
 	}
 }
 @media only screen and (max-width: 450px) {
