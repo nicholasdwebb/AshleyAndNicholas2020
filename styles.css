@@ -40,6 +40,12 @@ nav{
 	box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.23);
 	margin-bottom: 30px;
 }
+#gallery img:hover{
+	cursor: pointer !important;
+	-webkit-box-shadow: 0px 0px 8px 1px rgba(70,130,180,0.7);
+	-moz-box-shadow: 0px 0px 8px 1px rgba(70,130,180,0.7);
+	box-shadow: 0px 0px 8px 1px rgba(70,130,180,0.7);
+}
 #viewer{
 	display: none;
 	width: 100%;
@@ -61,7 +67,6 @@ nav{
 #viewer img{
 	max-height: 80%;
 	max-width: 97%;
-	cursor: pointer;
 }
 #viewer i{
 	font-size: 50px;
