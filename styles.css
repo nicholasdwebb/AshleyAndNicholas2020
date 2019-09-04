@@ -103,3 +103,8 @@ nav{
 	left: 100%;
 	margin-left: -55px;
 }
+@media only screen and (max-width: 767px) {
+	#viewer #prev, #viewer #next{
+		margin-top: 80%;
+	}
+}
