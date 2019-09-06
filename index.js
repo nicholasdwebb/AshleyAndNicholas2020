@@ -34,7 +34,7 @@ $(function(){
 	//gallery
 	function startGallery(){
 		var galIndex = 0;
-		$("#gallery img").each(function(i,e){
+		$("#mainWindow #gallery img").each(function(i,e){
 			// console.log(i,e);
 			$(e).click(function(){
 				$("#viewer").css("display","flex");
@@ -49,14 +49,14 @@ $(function(){
 			$("#viewer").show();
 			galIndex--;
 			if(galIndex < 0){
-				galIndex = $("#gallery img").length - 1;
+				galIndex = $("#mainWindow #gallery img").length - 1;
 			}
 			$("#viewer img").attr("src",$("#gallery img:eq("+galIndex+")").attr("src"));
 		});
 		$("#next").click(function(){
 			$("#viewer").show();
 			galIndex++;
-			if(galIndex >= $("#gallery img").length){
+			if(galIndex >= $("#mainWindow #gallery img").length){
 				galIndex = 0;
 			}
 			$("#viewer img").attr("src",$("#gallery img:eq("+galIndex+")").attr("src"));
