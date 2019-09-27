@@ -17,13 +17,33 @@ $(function(){
 		swapMainWindow("#galleryWrapper");
 		setTimeout(startGallery,500);
 	});
-	function swapMainWindow(str){
-		$("#mainWindow").animate({opacity: 0}, 150);
-		setTimeout(function(){
-			$("#mainWindow").html($(str).html());
-			$(window).scrollTop(0);
-			$("#mainWindow").animate({opacity: 1}, 150);
-		},150);
+	$("#animalKingdownNavbar").click(function(){
+		swapMainWindow("#ThingsToDoWrapper", "#AnimalKingdom");
+	});
+	$("#epcotNavbar").click(function(){
+		swapMainWindow("#ThingsToDoWrapper", "#Epcot");
+	});
+	var lastThing;
+	function swapMainWindow(str, header){
+		if(lastThing != str){
+			setTimeout(function(){
+				$("#mainWindow").animate({opacity: 0}, 150);
+				$("#mainWindow").html($(str).html());
+				$(window).scrollTop(0);
+				$("#mainWindow").animate({opacity: 1}, 150);
+			},150);
+		}
+		lastThing = str
+		if(header != undefined){
+			var top = $(header).offset().top;
+			top -= 20
+			if(top<0){
+				top = 0
+			}
+			$([document.documentElement, document.body]).animate({
+	    	    scrollTop: top
+		    }, 500);
+		}
 	}
 	$("#mainWindow").mouseenter(function(){
 		if(window.innerWidth <= 768 && $("nav").height() >= 50){

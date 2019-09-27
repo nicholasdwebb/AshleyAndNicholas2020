@@ -47,7 +47,7 @@ nav{
 	transform: rotate(-4deg);
 	max-width: 20%;
 }
-#hedgehog img, #trashPanda img{
+#hedgehog img, #trashPanda img, img.thingsToDo{
 	width: 100%;
 }
 #hedgehog p, #trashPanda p{
