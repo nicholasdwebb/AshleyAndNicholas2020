@@ -9,22 +9,9 @@ $(function(){
 		}
 		setTimeout(f,250);
 	}, 250);
-	swapMainWindow("#aboutUsWrapper");
-	$("#aboutUsNavbar").click(function(){
-		swapMainWindow("#aboutUsWrapper");
-	});
-	$("#galleryNavbar").click(function(){
-		swapMainWindow("#galleryWrapper");
-		setTimeout(startGallery,500);
-	});
-	$("#animalKingdownNavbar").click(function(){
-		swapMainWindow("#ThingsToDoWrapper", "#AnimalKingdom");
-	});
-	$("#epcotNavbar").click(function(){
-		swapMainWindow("#ThingsToDoWrapper", "#Epcot");
-	});
 	var lastThing;
-	function swapMainWindow(str, header){
+	window.swapMainWindow = function(str,header){
+	// function swapMainWindow(str, header){
 		if(lastThing != str){
 			setTimeout(function(){
 				$("#mainWindow").animate({opacity: 0}, 150);
@@ -35,16 +22,19 @@ $(function(){
 		}
 		lastThing = str
 		if(header != undefined){
-			var top = $(header).offset().top;
-			top -= 20
-			if(top<0){
-				top = 0
-			}
-			$([document.documentElement, document.body]).animate({
-	    	    scrollTop: top
-		    }, 500);
+			setTimeout(function(){
+				var top = $(header).offset().top;
+				top = top - 20;
+				if(top<= 60){
+					top = 0
+				}
+				$([document.documentElement, document.body]).animate({
+		    	    scrollTop: top
+			    }, 500);
+		    },250);
 		}
 	}
+	swapMainWindow("#aboutUsWrapper");
 	$("#mainWindow").mouseenter(function(){
 		if(window.innerWidth <= 768 && $("nav").height() >= 50){
 			$(".navbar-toggler-icon").click();

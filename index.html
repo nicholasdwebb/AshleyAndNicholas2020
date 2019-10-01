@@ -5,10 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<script type="text/javascript" src="lib/js/jquery.min.js"></script>
 	<script type="text/javascript" src="lib/js/bootstrap.bundle.min.js"></script>
-	<script type="text/javascript" src="index.js?v=09042018_1"></script>
+	<script type="text/javascript" src="index.js?v=10012019_1"></script>
 	<link rel="stylesheet" type="text/css" href="lib/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="lib/fontawesome/css/all.min.css">
-	<link rel="stylesheet" type="text/css" href="styles.css?v=09042018_1">
+	<link rel="stylesheet" type="text/css" href="styles.css?v=09042019_1">
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -19,10 +19,10 @@
 		</button>
 		<div class="collapse navbar-collapse" id="navbarNav">
 			<ul class="navbar-nav">
-				<li id="aboutUsNavbar" class="nav-item">
+				<li class="nav-item" onclick='swapMainWindow("#aboutUsWrapper");'>
 					<a class="nav-link"><i class="fas fa-book-open steelBlue"></i> Our Story</a>
 				</li>
-				<li id="galleryNavbar" class="nav-item">
+				<li class="nav-item" onclick='swapMainWindow("#galleryWrapper");setTimeout(startGallery,500);'>
 					<a class="nav-link"><i class="far fa-images iconBlue steelBlue"></i> Gallery</a>
 				</li>
 				<li class="nav-item dropdown">
@@ -30,9 +30,10 @@
 						Things to Do
 					</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="#" id="animalKingdownNavbar">Animal Kingdom</a>
-						<a class="dropdown-item" href="#" id="epcotNavbar">Epcot</a>
-						<!-- <a class="dropdown-item" href="#"></a> -->
+						<a class="dropdown-item" onclick='swapMainWindow("#ThingsToDoWrapper", "#intro");'>Introduction</a>
+						<a class="dropdown-item" onclick='swapMainWindow("#ThingsToDoWrapper", "#AnimalKingdom");'>Animal Kingdom</a>
+						<a class="dropdown-item" onclick='swapMainWindow("#ThingsToDoWrapper", "#Epcot");'>Epcot</a>
+						<a class="dropdown-item" onclick='swapMainWindow("#ThingsToDoWrapper", "#MagicKingdom");'>Magic Kingdom</a>
 						<!-- <div class="dropdown-divider"></div> -->
 					</div>
 				</li>
@@ -50,10 +51,12 @@
 <div id="ThingsToDoWrapper" class="container" style="display: none;">
 	<div class="row">
 		<div class="col">
-			<div id="AnimalKingdom"></div>
+			<div id="intro"></div>
 			<p>
 				Welcome to Disney for the Souza/Webb wedding!  Nicholas and Ashley are very excited to share this experience with their friends and family.  There is plenty to do in Walt Disney World besides the 4 theme parks and 2 water parks.  Below is Ashley’s Tips for enduring those parks (and of course where to eat!) along with other non-park options.  We hope you have fun celebrating this special occasion with us!
 			</p>
+			<div id="AnimalKingdom"></div>
+			<br><br>
 			<h3>Animal Kingdom:</h3>
 			<hr>
 			<p>
@@ -74,7 +77,6 @@
 				Ashley’s Favorite Drink: Rum Blossom-> this delightful beverage is located in Avatar area near the Canteen.
 			</p>
 			<img class="thingsToDo" src="Pics/ThingsToDo/Animal Kingdom Map.jpg" />
-			<br>
 			<div id="Epcot"></div>
 			<br><br>
 			<h3>Epcot</h3>
@@ -91,8 +93,34 @@
                	Sit Down: Nine Dragons Restaurant (China), Via Napoli Ristorante e Pizzeria (Ashley’s brother highly recommends), Teppan Edo (Japan), Le Cellier Steakhouse (Canada)
                	<br><br>
                	Quick Service: Electric Umbrella, Lotus Blossom Café (Ashley highly recommends the orange chicken and mango smoothie), Liberty Inn (America), Yorkshire County Fish Shop (Ashley’s Dad’s favorite)
-
 			</p>
+			<img class="thingsToDo" src="Pics/ThingsToDo/epcot-map.jpg"/>
+			<div id="MagicKingdom"></div>
+			<br><br>
+			<h3>Magic Kingdom</h3>
+			<hr>
+			<p>
+				This is Ashley’s Dad’s favorite park-> you really should ride the train that encircles the entirety of the park.  It gives great views of each land.  Magic Kingdom is set up into a few different areas: you will enter on Mainstreet USA which houses cute shops and eateries.  You can then break off into Adventureland, Tomorrowland, or Liberty Square.  Ashley highly recommends Adventureland or Tomorrowland and making a full circle through all the lands (which surround the Cinderella Castle): Frontierland, Liberty Square, and Fantasyland.
+	           	<ul>
+	           		<li>
+	           			FastPass Options: The Jungle Cruise, Pirates of the Carribean, Splash Mountain, Thunder Mountain, Space Mountain, The Haunted Mansion, Under the Sea Journey of the Little Mermaid, Peter Pans Flight, The Many Adventures of Winnie the Pooh, Seven Dwarf Mine Train
+	           		</li>
+	           		<li>
+	           			Other Mentionable rides that you can usually get into without FastPass: The Peoplemover (Tomorrowland), The Carousel of Progress (Tomorrowland), Monster’s Inc. the Laugh Floor (Tomorrowland), Enchanted Tiki Room (Adventureland), Swiss Family Treehouse (Adventureland), Country Bear Jamboree (Frontierland), Mad Tea Party (Fantasyland)
+           			</li>
+       			</ul>
+				 
+				<h4>Places to Eat:</h4>
+				<ul>
+	           		<li>
+		           		Sit Down: Tony’s Town Square Restaurant, Liberty Tree Tavern, Be Our Guest Restaurant (Recommend for DINNER)
+	           		</li>
+	           		<li>
+	           			Quick service: Cosmic Ray’s Starlight Café, Pecos Bill Tall Tale Inn and Café, Pinocchio Village House, Gaston’s Tavern, Tomorrowland Terrace Restaurant
+           			</li>
+       			</ul>
+			</p>
+			<img class="thingsToDo" src="Pics/ThingsToDo/disney-magic-kingdom-map-01.jpg"/>
 		</div>
 	</div>
 </div>
