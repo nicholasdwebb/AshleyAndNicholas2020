@@ -30,6 +30,19 @@ nav{
 	margin-left: 10px;
 	margin-bottom: 10px;
 }
+#registry img{
+	width: 90%;
+	margin: 10px 5% 10px 5%;
+}
+#registry img:hover{
+	cursor: pointer !important;
+	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1e5799+0,207cca+1,2989d8+23,2989d8+23,7db9e8+56&0.47+0,0+75 */
+	background: -moz-radial-gradient(center, ellipse cover,  rgba(30,87,153,0.47) 0%, rgba(32,124,202,0.46) 1%, rgba(41,137,216,0.32) 23%, rgba(125,185,232,0.12) 56%, rgba(125,185,232,0) 75%); /* FF3.6-15 */
+	background: -webkit-radial-gradient(center, ellipse cover,  rgba(30,87,153,0.47) 0%,rgba(32,124,202,0.46) 1%,rgba(41,137,216,0.32) 23%,rgba(125,185,232,0.12) 56%,rgba(125,185,232,0) 75%); /* Chrome10-25,Safari5.1-6 */
+	background: radial-gradient(ellipse at center,  rgba(30,87,153,0.47) 0%,rgba(32,124,202,0.46) 1%,rgba(41,137,216,0.32) 23%,rgba(125,185,232,0.12) 56%,rgba(125,185,232,0) 75%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#781e5799', endColorstr='#007db9e8',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
 #hedgehog, #trashPanda{
 	float: right;
 	max-width: 30%;
