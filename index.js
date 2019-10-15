@@ -10,6 +10,12 @@ $(function(){
 		setTimeout(f,250);
 	}, 250);
 	var lastThing;
+	window.confettiWrapper = function(){
+		confetti.maxCount = 300;
+		confetti.speed = 5;
+		confetti.start();
+		setTimeout(confetti.stop, 500);
+	}
 	window.swapMainWindow = function(str,header){
 	// function swapMainWindow(str, header){
 		if(lastThing != str){

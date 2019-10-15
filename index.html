@@ -5,10 +5,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<script type="text/javascript" src="lib/js/jquery.min.js"></script>
 	<script type="text/javascript" src="lib/js/bootstrap.bundle.min.js"></script>
-	<script type="text/javascript" src="index.js?v=10012019_1"></script>
+	<script type="text/javascript" src="index.js?v=10015019_1"></script>
+	<script type="text/javascript" src="lib/js/confetti.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="lib/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="lib/fontawesome/css/all.min.css">
 	<link rel="stylesheet" type="text/css" href="styles.css?v=09042019_1">
+	<link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -22,7 +24,7 @@
 				<li class="nav-item" onclick='swapMainWindow("#aboutUsWrapper");'>
 					<a class="nav-link"><i class="fas fa-book-open steelBlue"></i> Our Story</a>
 				</li>
-				<li class="nav-item" onclick='swapMainWindow("#WeddingDetailsWrapper");'>
+				<li class="nav-item" onclick='swapMainWindow("#WeddingDetailsWrapper");confettiWrapper();'>
 					<a class="nav-link"><i class="fas fa-church steelBlue"></i> Our Wedding</a>
 				</li>
 				<li class="nav-item" onclick='swapMainWindow("#galleryWrapper");setTimeout(startGallery,500);'>
@@ -58,16 +60,28 @@
 	<h3>Our Wedding</h3>
 	<hr>
 	<div id="WeddingDetails">
-		<img id="pavilion" src="Pics/Misc/Pavilion.jpg" />
-		<p style="margin-top: 10px; margin-bottom: 2px;">
-			The Wedding will happen at Disney on October 15, 2020.
-		</p>
-		<ul>
-			<li>Ceremony: Disney’s Wedding Pavilion at 5 pm</li>
-			<li>Pre-Reception/Reception: 6:00pm-11:00pm Living Seas Salon at Epcot</li>
-			<li>Rehearsal Dinner: October 14, 2020 6:00pm to 9:00pm Napa Room at the California Grill</li>
-			<li>Farewell Breakfast:  October 16, 2020 10:00am to 12:00pm Citricos at Disney’s Grand Floridian Resort</li>
-		</ul>
+		<p class="bannerCaption">The Pavilion</p>
+		<img class="banner" src="Pics/Misc/Pavilion.jpg" />
+		<div class="row">
+			<div id="bigDateThing" class="col-3 col-md-2">
+				<p>10</p><hr>
+				<p>15</p><hr>
+				<p>20</p>
+			</div>
+			<div class="col-9 col-md-10">
+				<p style="margin-top: 10px; margin-bottom: 2px;">
+					The Wedding will happen at Disney on October 15, 2020!
+				</p>
+				<ul>
+					<li>Ceremony: Disney’s Wedding Pavilion at 5 pm</li>
+					<li>Pre-Reception/Reception: 6:00pm-11:00pm Living Seas Salon at Epcot</li>
+					<li>Rehearsal Dinner: October 14, 2020 6:00pm to 9:00pm Napa Room at the California Grill</li>
+					<li>Farewell Breakfast:  October 16, 2020 10:00am to 12:00pm Citricos at Disney’s Grand Floridian Resort</li>
+				</ul>
+			</div>
+		</div>
+		<p class="bannerCaption">The Living Seas</p>
+		<img class="banner" src="Pics/Misc/living seas.jpg" />
 	</div>
 </div>
 <div id="RegistryWrapper" class="container" style="display: none;">
