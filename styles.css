@@ -43,6 +43,22 @@ nav{
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#781e5799', endColorstr='#007db9e8',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 
 }
+#WeddingDetails #pavilion{
+	width: 100%;
+	margin: 0;
+	object-fit: cover;
+	height: 150px;
+}
+
+#WeddingDetails img{
+	width: 90%;
+	margin: 10px 5% 10px 5%;
+}
+@media only screen and (max-width: 767px) {
+	#WeddingDetails img{
+		height: 100px !important;
+	}
+}
 #hedgehog, #trashPanda{
 	float: right;
 	max-width: 30%;

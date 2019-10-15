@@ -22,6 +22,9 @@
 				<li class="nav-item" onclick='swapMainWindow("#aboutUsWrapper");'>
 					<a class="nav-link"><i class="fas fa-book-open steelBlue"></i> Our Story</a>
 				</li>
+				<li class="nav-item" onclick='swapMainWindow("#WeddingDetailsWrapper");'>
+					<a class="nav-link"><i class="fas fa-church steelBlue"></i> Our Wedding</a>
+				</li>
 				<li class="nav-item" onclick='swapMainWindow("#galleryWrapper");setTimeout(startGallery,500);'>
 					<a class="nav-link"><i class="far fa-images iconBlue steelBlue"></i> Gallery</a>
 				</li>
@@ -29,7 +32,7 @@
 					<a class="nav-link"><i class="fas fa-gifts iconBlue steelBlue"></i> Registry</a>
 				</li>
 				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						Things to Do
 					</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -49,6 +52,22 @@
 		<div class="col-sm-12 col-lg-1"></div>
 		<div id="mainWindow" class="col-sm-12 col-lg-10"></div>
 		<div class="col-sm-12 col-lg-1"></div>
+	</div>
+</div>
+<div id="WeddingDetailsWrapper" class="container" style="display: none;">
+	<h3>Our Wedding</h3>
+	<hr>
+	<div id="WeddingDetails">
+		<img id="pavilion" src="Pics/Misc/Pavilion.jpg" />
+		<p style="margin-top: 10px; margin-bottom: 2px;">
+			The Wedding will happen at Disney on October 15, 2020.
+		</p>
+		<ul>
+			<li>Ceremony: Disney’s Wedding Pavilion at 5 pm</li>
+			<li>Pre-Reception/Reception: 6:00pm-11:00pm Living Seas Salon at Epcot</li>
+			<li>Rehearsal Dinner: October 14, 2020 6:00pm to 9:00pm Napa Room at the California Grill</li>
+			<li>Farewell Breakfast:  October 16, 2020 10:00am to 12:00pm Citricos at Disney’s Grand Floridian Resort</li>
+		</ul>
 	</div>
 </div>
 <div id="RegistryWrapper" class="container" style="display: none;">
