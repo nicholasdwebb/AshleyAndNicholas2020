@@ -48,7 +48,7 @@ $(function(){
 	});
 
 	//gallery
-	function startGallery(){
+	window.startGallery = function(){
 		var galIndex = 0;
 		$("#mainWindow #gallery img").each(function(i,e){
 			// console.log(i,e);
