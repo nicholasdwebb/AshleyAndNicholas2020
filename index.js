@@ -1,6 +1,6 @@
 $(function(){
 	//general
-	var windowHeight = 0;
+	/*var windowHeight = 0;
 	setTimeout(function f(){
 		if(windowHeight != window.innerHeight){
 			windowHeight = window.innerHeight;
@@ -8,7 +8,7 @@ $(function(){
 			// console.log(windowHeight);
 		}
 		setTimeout(f,250);
-	}, 250);
+	}, 250);*/
 	var lastThing;
 	window.confettiWrapper = function(){
 		confetti.maxCount = 300;
